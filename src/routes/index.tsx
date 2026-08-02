@@ -1,24 +1,75 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ActivityBar } from "@/components/vscode/ActivityBar";
+import { CommandPalette } from "@/components/vscode/CommandPalette";
+import { FileView } from "@/components/vscode/FileViews";
+import { Sidebar } from "@/components/vscode/Sidebar";
+import { StatusBar } from "@/components/vscode/StatusBar";
+import { TabsBar } from "@/components/vscode/TabsBar";
+import { TerminalPanel } from "@/components/vscode/TerminalPanel";
+import { TitleBar } from "@/components/vscode/TitleBar";
+import { WorkbenchProvider, useWorkbench } from "@/components/vscode/workbench";
+import { PROFILE } from "@/lib/portfolio-data";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = `${PROFILE.name} — MERN Developer Portfolio, built as VS Code`;
+const description =
+  "An interactive VS Code themed portfolio: explorer, tabs, integrated terminal, command palette and light/dark themes. Full-stack MERN work, experience and projects.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+function Workbench() {
+  const { activeFile, openTabs, panelOpen } = useWorkbench();
+
+  return (
+    <div className="flex h-screen w-full flex-col overflow-hidden bg-editor text-editor-fg">
+      <TitleBar />
+      <div className="flex min-h-0 flex-1">
+        <ActivityBar />
+        <Sidebar />
+        <main className="flex min-w-0 flex-1 flex-col">
+          <TabsBar />
+          <div className="min-h-0 flex-1 bg-editor">
+            {openTabs.length ? (
+              <FileView id={activeFile} />
+            ) : (
+              <div className="flex h-full flex-col items-center justify-center gap-2 font-mono text-[13px] text-line-number">
+                <p>Show All Commands — Ctrl + Shift + P</p>
+                <p>Open File — Ctrl + P</p>
+                <p>Toggle Terminal — Ctrl + `</p>
+              </div>
+            )}
+          </div>
+          {panelOpen && (
+            <div className="h-[38%] min-h-[180px] shrink-0">
+              <TerminalPanel />
+            </div>
+          )}
+        </main>
+      </div>
+      <StatusBar />
+      <CommandPalette />
+      <h1 className="sr-only">
+        {PROFILE.name} — {PROFILE.role} portfolio
+      </h1>
+    </div>
+  );
+}
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <WorkbenchProvider>
+      <Workbench />
+    </WorkbenchProvider>
   );
 }
