@@ -238,7 +238,7 @@ function ContactView() {
     <span>{i(1)}<P>);</P></span>,
     <span><P>{"}"}</P></span>,
     <></>,
-    <span><C>// Open to full-stack MERN roles and freelance builds.</C></span>,
+    <span><C>// Open to Software Engineering roles in AI tooling, backend and full-stack.</C></span>,
   ];
   return <CodeSurface lines={lines} />;
 }
