@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { A, C, CodeSurface, F, G, Indent, K, N, P, S, T, V } from "./CodeSurface";
 import { useWorkbench } from "./workbench";
 import { EDUCATION, EXPERIENCE, PROFILE, PROJECTS, SKILLS, type FileId } from "@/lib/portfolio-data";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
+
 
 const i = (n: number) => <Indent n={n} />;
 
@@ -48,7 +50,7 @@ function AboutView() {
       </a>
     </span>,
     <></>,
-    <span className="text-syn-comment">&lt;!-- Placeholder content. Swap in your real details. --&gt;</span>,
+    <span className="text-syn-comment">&lt;!-- Open to SWE roles in AI tooling, backend and full-stack. --&gt;</span>,
   ];
   return <CodeSurface lines={lines} />;
 }
@@ -236,7 +238,7 @@ function ContactView() {
     <span>{i(1)}<P>);</P></span>,
     <span><P>{"}"}</P></span>,
     <></>,
-    <span><C>// Open to full-stack MERN roles and freelance builds.</C></span>,
+    <span><C>// Open to Software Engineering roles in AI tooling, backend and full-stack.</C></span>,
   ];
   return <CodeSurface lines={lines} />;
 }
@@ -254,13 +256,14 @@ function ResumeView() {
           The editor cannot open this file because it is binary.
         </p>
         <a
-          href="/resume.pdf"
-          download
+          href={resumeAsset.url}
+          download="Kirthika-S-Resume.pdf"
           className="mt-5 inline-flex items-center gap-2 rounded-sm bg-statusbar px-4 py-2 font-mono text-[12px] text-statusbar-fg transition-opacity hover:opacity-90"
         >
           <Download className="h-4 w-4" /> Download resume
         </a>
-        <p className="mt-3 font-mono text-[11px] text-line-number">Placeholder file — drop your PDF into /public.</p>
+        <p className="mt-3 font-mono text-[11px] text-line-number">Kirthika S — Software Engineer, Chennai.</p>
+
       </div>
     </div>
   );
