@@ -10,9 +10,10 @@ import { TitleBar } from "@/components/vscode/TitleBar";
 import { WorkbenchProvider, useWorkbench } from "@/components/vscode/workbench";
 import { PROFILE } from "@/lib/portfolio-data";
 
-const title = `${PROFILE.name} — MERN Developer Portfolio, built as VS Code`;
+const title = `${PROFILE.name} — Software Engineer Portfolio, built as VS Code`;
 const description =
-  "An interactive VS Code themed portfolio: explorer, tabs, integrated terminal, command palette and light/dark themes. Full-stack MERN work, experience and projects.";
+  "Interactive VS Code themed portfolio of Kirthika S, Software Engineer in Chennai: AI developer tooling at Comcast, FastAPI and Spring Boot work, projects, skills and resume download.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
