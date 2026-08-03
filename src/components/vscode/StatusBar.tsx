@@ -20,7 +20,7 @@ export function StatusBar() {
         </span>
       </button>
       <span className="hidden items-center gap-1 sm:flex">
-        <Radio className="h-3.5 w-3.5" /> mongodb://localhost:27017
+        <Radio className="h-3.5 w-3.5" /> localhost:8000 · FastAPI
       </span>
 
       <div className="ml-auto flex items-center gap-3">
