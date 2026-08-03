@@ -212,7 +212,7 @@ function Extensions() {
   const exts = [
     { name: "ESLint", pub: "Microsoft", d: "Integrates ESLint into VS Code." },
     { name: "Prettier", pub: "Prettier", d: "Code formatter using prettier." },
-    { name: "MongoDB for VS Code", pub: "MongoDB", d: "Connect, browse and query MongoDB." },
+    { name: "Python", pub: "Microsoft", d: "IntelliSense, linting and debugging for Python." },
     { name: "Tailwind CSS IntelliSense", pub: "Tailwind Labs", d: "Autocomplete and linting." },
     { name: "GitLens", pub: "GitKraken", d: "Supercharge Git inside the editor." },
   ];
