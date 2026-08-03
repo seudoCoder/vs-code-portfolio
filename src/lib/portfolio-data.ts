@@ -195,11 +195,12 @@ export const SKILLS: { group: string; items: string[] }[] = [
 
 
 export const TERMINAL_INTRO = [
-  { kind: "cmd" as const, text: "npm run dev" },
-  { kind: "dim" as const, text: "> portfolio@1.0.0 dev" },
+  { kind: "cmd" as const, text: "uvicorn app.main:app --reload" },
+  { kind: "dim" as const, text: "> kirthika-portfolio@1.0.0 dev" },
   { kind: "dim" as const, text: "> vite dev --host" },
   { kind: "ok" as const, text: "  VITE v8.1.5  ready in 214 ms" },
   { kind: "info" as const, text: "  ➜  Local:   http://localhost:5173/" },
-  { kind: "ok" as const, text: "  ➜  MongoDB connected: mongodb://localhost:27017/portfolio" },
+  { kind: "ok" as const, text: "  ➜  FastAPI inference service listening on :8000" },
   { kind: "dim" as const, text: "Type `help` for available commands." },
 ];
+
