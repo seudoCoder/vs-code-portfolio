@@ -178,30 +178,31 @@ function RunDebug() {
       <SectionHeader title="Run and Debug" />
       <div className="px-4 text-[13px] text-sidebar-fg">
         <button className="flex w-full items-center gap-2 rounded-sm border border-chrome-border bg-widget px-2 py-1 hover:border-focus">
-          <Play className="h-3.5 w-3.5 text-term-green" /> Launch MERN dev server
+          <Play className="h-3.5 w-3.5 text-term-green" /> Launch FastAPI + Vite dev
         </button>
         <p className="mt-3 text-line-number">
-          Runs <span className="font-mono text-syn-string">nodemon server.js</span> and{" "}
+          Runs <span className="font-mono text-syn-string">uvicorn app.main:app --reload</span> and{" "}
           <span className="font-mono text-syn-string">vite dev</span> concurrently.
         </p>
         <div className="mt-4 space-y-1 font-mono text-[12px]">
           <div className="text-[11px] uppercase tracking-wider text-sidebar-section">Variables</div>
           <div>
-            <span className="text-syn-var">NODE_ENV</span>
+            <span className="text-syn-var">ENV</span>
             <span className="text-syn-op">: </span>
             <span className="text-syn-string">"development"</span>
           </div>
           <div>
-            <span className="text-syn-var">MONGO_URI</span>
+            <span className="text-syn-var">DATABASE_URL</span>
             <span className="text-syn-op">: </span>
-            <span className="text-syn-string">"mongodb://localhost:27017/portfolio"</span>
+            <span className="text-syn-string">"postgresql://localhost:5432/portfolio"</span>
           </div>
           <div>
             <span className="text-syn-var">PORT</span>
             <span className="text-syn-op">: </span>
-            <span className="text-syn-number">5000</span>
+            <span className="text-syn-number">8000</span>
           </div>
         </div>
+
       </div>
     </div>
   );
