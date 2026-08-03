@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { A, C, CodeSurface, F, G, Indent, K, N, P, S, T, V } from "./CodeSurface";
 import { useWorkbench } from "./workbench";
 import { EDUCATION, EXPERIENCE, PROFILE, PROJECTS, SKILLS, type FileId } from "@/lib/portfolio-data";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
+
 
 const i = (n: number) => <Indent n={n} />;
 
