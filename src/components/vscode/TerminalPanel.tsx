@@ -160,7 +160,8 @@ export function TerminalPanel() {
       ) : (
         <div className="flex-1 px-4 py-3 font-mono text-[12.5px] text-line-number">
           {tab === "PROBLEMS" && "No problems have been detected in the workspace."}
-          {tab === "OUTPUT" && "[info] MongoDB driver connected · pool size 10"}
+          {tab === "OUTPUT" && "[info] FastAPI worker ready · model cache warm"}
+
           {tab === "DEBUG CONSOLE" && "Debugger listening on ws://127.0.0.1:9229"}
           {tab === "PORTS" && "5173 → vite   ·   5000 → express api   ·   27017 → mongod"}
         </div>
