@@ -50,7 +50,7 @@ function AboutView() {
       </a>
     </span>,
     <></>,
-    <span className="text-syn-comment">&lt;!-- Placeholder content. Swap in your real details. --&gt;</span>,
+    <span className="text-syn-comment">&lt;!-- Open to SWE roles in AI tooling, backend and full-stack. --&gt;</span>,
   ];
   return <CodeSurface lines={lines} />;
 }
