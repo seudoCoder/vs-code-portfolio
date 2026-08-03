@@ -304,7 +304,7 @@ function SettingsPanel() {
 
         <div className="mt-5 text-[11px] uppercase tracking-wider text-sidebar-section">Workspace</div>
         <p className="mt-1 font-mono text-[12px] text-line-number">
-          {PROJECTS.length} projects · {FILES.length} files · MongoDB + Express + React + Node
+          {PROJECTS.length} projects · {FILES.length} files · Python + FastAPI + Java + React
         </p>
       </div>
     </div>
