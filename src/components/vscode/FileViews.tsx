@@ -254,13 +254,14 @@ function ResumeView() {
           The editor cannot open this file because it is binary.
         </p>
         <a
-          href="/resume.pdf"
-          download
+          href={resumeAsset.url}
+          download="Kirthika-S-Resume.pdf"
           className="mt-5 inline-flex items-center gap-2 rounded-sm bg-statusbar px-4 py-2 font-mono text-[12px] text-statusbar-fg transition-opacity hover:opacity-90"
         >
           <Download className="h-4 w-4" /> Download resume
         </a>
-        <p className="mt-3 font-mono text-[11px] text-line-number">Placeholder file — drop your PDF into /public.</p>
+        <p className="mt-3 font-mono text-[11px] text-line-number">Kirthika S — Software Engineer, Chennai.</p>
+
       </div>
     </div>
   );
