@@ -1,24 +1,25 @@
 # VS Code Portfolio
 
-i want to create a VS code themed portfolio..Looks exactly like vscode window..all the icons the panels , tabs , terminal settings every small detail..both light and dark theme in settings..typography and everything..differnt sections like about, experience , eduation, projects all based off like files open..make sure to embed every little detail..mongodb backend ,mern stack, placeholders, resume download,command pallete
+A VS Code-inspired portfolio with a file explorer, tabs, terminal, command palette, and both light and dark themes.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/afc626a6-84f0-4845-96f4-6041d9feb3bc).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- VS Code-like layout with activity bar, sidebar, tabs, and status bar
+- Portfolio sections styled like open project files
+- Resume download and contact links
+- Responsive, polished interface built with React and Tailwind
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This project uses Node.js and npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
+```
+
+For a production build:
+
+```sh
+npm run build
 ```
