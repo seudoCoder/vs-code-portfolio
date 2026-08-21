@@ -11,7 +11,7 @@ PROFILE = {
     "phone": "+91 99625 28099",
     "github": "github.com/seudoCoder",
     "linkedin": "linkedin.com/in/kirthikasubramani",
-    "website": "kirthika.dev",
+    "website": "seudocoder.onrender.com/",
     "summary": (
         "Curious, fast-learning Software Engineer driven by a passion for "
         "AI-powered developer tooling, automation and full-stack systems. "
