@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Routes, Route, Link } from "react-router-dom";
 import { ActivityBar } from "@/components/vscode/ActivityBar";
 import { CommandPalette } from "@/components/vscode/CommandPalette";
 import { FileView } from "@/components/vscode/FileViews";
@@ -9,25 +9,6 @@ import { TerminalPanel } from "@/components/vscode/TerminalPanel";
 import { TitleBar } from "@/components/vscode/TitleBar";
 import { WorkbenchProvider, useWorkbench } from "@/components/vscode/workbench";
 import { PROFILE } from "@/lib/portfolio-data";
-
-const title = `${PROFILE.name} — Software Engineer Portfolio, built as VS Code`;
-const description =
-  "Interactive VS Code themed portfolio of Kirthika S, Software Engineer in Chennai: AI developer tooling at Comcast, FastAPI and Spring Boot work, projects, skills and resume download.";
-
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Index,
-});
 
 function Workbench() {
   const { activeFile, openTabs, panelOpen } = useWorkbench();
@@ -67,10 +48,40 @@ function Workbench() {
   );
 }
 
-function Index() {
+function NotFound() {
   return (
-    <WorkbenchProvider>
-      <Workbench />
-    </WorkbenchProvider>
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Go home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function App() {
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <WorkbenchProvider>
+            <Workbench />
+          </WorkbenchProvider>
+        }
+      />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }

@@ -140,15 +140,15 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    name: "ai-inference-infra",
-    tagline: "FastAPI inference service for transformer models",
-    stack: ["FastAPI", "Hugging Face", "Docker"],
-    repo: "github.com/seudoCoder/ai-inference-infra",
-    demo: "github.com/seudoCoder/ai-inference-infra",
+    name: "Fintankz",
+    tagline: "Learn the basics of finance, simply",
+    stack: ["React", "FastAPI", "MongoDB"],
+    repo: "instagram.com/fintankz",
+    demo: "fintankz.onrender.com",
     bullets: [
-      "Architected a FastAPI inference service integrating Hugging Face transformer models for real-time predictions.",
-      "Exposed observability and health-check endpoints to monitor latency and readiness in production.",
-      "Containerized the pipeline with Docker for scalable, reproducible deployment across environments.",
+      "Founded Fintankz — a passion-driven brand that helps people understand the basics of finance.",
+      "Built a full-stack web app with a React frontend, FastAPI backend and MongoDB data layer.",
+      "Growing an engaged community via Instagram (@fintankz) alongside the live platform.",
     ],
   },
   {
@@ -178,7 +178,7 @@ export const PROJECTS: Project[] = [
   {
     name: "portfolio-vscode",
     tagline: "This very editor, rebuilt in React",
-    stack: ["React", "TanStack", "Tailwind"],
+    stack: ["React", "FastAPI", "Tailwind"],
     repo: "github.com/seudoCoder/portfolio-vscode",
     demo: "kirthika.dev",
     bullets: ["Command palette, tabs, terminal and theme switching.", "Fully keyboard navigable."],

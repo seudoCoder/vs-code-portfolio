@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { A, C, CodeSurface, F, G, Indent, K, N, P, S, T, V } from "./CodeSurface";
 import { useWorkbench } from "./workbench";
 import { EDUCATION, EXPERIENCE, PROFILE, PROJECTS, SKILLS, type FileId } from "@/lib/portfolio-data";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 
 const i = (n: number) => <Indent n={n} />;
@@ -256,7 +255,7 @@ function ResumeView() {
           The editor cannot open this file because it is binary.
         </p>
         <a
-          href={resumeAsset.url}
+          href="/Kirthika-S-Resume.pdf"
           download="Kirthika-S-Resume.pdf"
           className="mt-5 inline-flex items-center gap-2 rounded-sm bg-statusbar px-4 py-2 font-mono text-[12px] text-statusbar-fg transition-opacity hover:opacity-90"
         >
